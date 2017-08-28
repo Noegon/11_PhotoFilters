@@ -6,13 +6,13 @@
 //  Copyright © 2017 Alexey Stafeyev. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "NGNSelectViewController.h"
 
-@interface ViewController ()
+@interface NGNSelectViewController ()
 
 @end
 
-@implementation ViewController
+@implementation NGNSelectViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
