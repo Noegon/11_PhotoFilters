@@ -9,11 +9,16 @@
 /* Begin PBXBuildFile section */
 		403CA25A1F54B12500690455 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 403CA2591F54B12500690455 /* main.m */; };
 		403CA25D1F54B12500690455 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 403CA25C1F54B12500690455 /* AppDelegate.m */; };
-		403CA2601F54B12500690455 /* NGNSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 403CA25F1F54B12500690455 /* NGNSelectViewController.m */; };
 		403CA2631F54B12500690455 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 403CA2611F54B12500690455 /* Main.storyboard */; };
 		403CA2651F54B12500690455 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 403CA2641F54B12500690455 /* Assets.xcassets */; };
 		403CA2681F54B12500690455 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 403CA2661F54B12500690455 /* LaunchScreen.storyboard */; };
-		403CA2711F54B23000690455 /* NGNFilteringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 403CA2701F54B23000690455 /* NGNFilteringViewController.m */; };
+		403CA2761F54CAD500690455 /* NGNImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 403CA2751F54CAD500690455 /* NGNImageCell.m */; };
+		403CA2791F54D05300690455 /* UIImage+NGNScaledImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 403CA2781F54D05300690455 /* UIImage+NGNScaledImage.m */; };
+		403CA27F1F54D37800690455 /* NGNFilteringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 403CA27C1F54D37800690455 /* NGNFilteringViewController.m */; };
+		403CA2801F54D37800690455 /* NGNSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 403CA27E1F54D37800690455 /* NGNSelectViewController.m */; };
+		403CA2831F54D39B00690455 /* NGNFilteringService.m in Sources */ = {isa = PBXBuildFile; fileRef = 403CA2821F54D39B00690455 /* NGNFilteringService.m */; };
+		403CA2891F54DCE400690455 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 403CA2881F54DCE400690455 /* QuartzCore.framework */; };
+		403CA28B1F54DCEF00690455 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 403CA28A1F54DCEF00690455 /* Photos.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,14 +26,22 @@
 		403CA2591F54B12500690455 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		403CA25B1F54B12500690455 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		403CA25C1F54B12500690455 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		403CA25E1F54B12500690455 /* NGNSelectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGNSelectViewController.h; sourceTree = "<group>"; };
-		403CA25F1F54B12500690455 /* NGNSelectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGNSelectViewController.m; sourceTree = "<group>"; };
 		403CA2621F54B12500690455 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		403CA2641F54B12500690455 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		403CA2671F54B12500690455 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		403CA2691F54B12500690455 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		403CA26F1F54B23000690455 /* NGNFilteringViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGNFilteringViewController.h; sourceTree = "<group>"; };
-		403CA2701F54B23000690455 /* NGNFilteringViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGNFilteringViewController.m; sourceTree = "<group>"; };
+		403CA2741F54CAD500690455 /* NGNImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGNImageCell.h; path = View/NGNImageCell.h; sourceTree = "<group>"; };
+		403CA2751F54CAD500690455 /* NGNImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGNImageCell.m; path = View/NGNImageCell.m; sourceTree = "<group>"; };
+		403CA2771F54D05300690455 /* UIImage+NGNScaledImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+NGNScaledImage.h"; path = "View/UIImage+NGNScaledImage.h"; sourceTree = "<group>"; };
+		403CA2781F54D05300690455 /* UIImage+NGNScaledImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+NGNScaledImage.m"; path = "View/UIImage+NGNScaledImage.m"; sourceTree = "<group>"; };
+		403CA27B1F54D37800690455 /* NGNFilteringViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGNFilteringViewController.h; path = 11_PhotoFilters/Controller/NGNFilteringViewController.h; sourceTree = "<group>"; };
+		403CA27C1F54D37800690455 /* NGNFilteringViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGNFilteringViewController.m; path = 11_PhotoFilters/Controller/NGNFilteringViewController.m; sourceTree = "<group>"; };
+		403CA27D1F54D37800690455 /* NGNSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGNSelectViewController.h; path = 11_PhotoFilters/Controller/NGNSelectViewController.h; sourceTree = "<group>"; };
+		403CA27E1F54D37800690455 /* NGNSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGNSelectViewController.m; path = 11_PhotoFilters/Controller/NGNSelectViewController.m; sourceTree = "<group>"; };
+		403CA2811F54D39B00690455 /* NGNFilteringService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGNFilteringService.h; path = Model/NGNFilteringService.h; sourceTree = "<group>"; };
+		403CA2821F54D39B00690455 /* NGNFilteringService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGNFilteringService.m; path = Model/NGNFilteringService.m; sourceTree = "<group>"; };
+		403CA2881F54DCE400690455 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		403CA28A1F54DCEF00690455 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				403CA28B1F54DCEF00690455 /* Photos.framework in Frameworks */,
+				403CA2891F54DCE400690455 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +62,7 @@
 			children = (
 				403CA2571F54B12500690455 /* 11_PhotoFilters */,
 				403CA2561F54B12500690455 /* Products */,
+				403CA2871F54DCE400690455 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,10 +79,9 @@
 			children = (
 				403CA25B1F54B12500690455 /* AppDelegate.h */,
 				403CA25C1F54B12500690455 /* AppDelegate.m */,
-				403CA25E1F54B12500690455 /* NGNSelectViewController.h */,
-				403CA25F1F54B12500690455 /* NGNSelectViewController.m */,
-				403CA26F1F54B23000690455 /* NGNFilteringViewController.h */,
-				403CA2701F54B23000690455 /* NGNFilteringViewController.m */,
+				403CA27A1F54D34500690455 /* Model */,
+				403CA2731F54CA9C00690455 /* View */,
+				403CA2721F54CA8200690455 /* Controller */,
 				403CA2581F54B12500690455 /* Supporting Files */,
 			);
 			path = 11_PhotoFilters;
@@ -82,6 +97,47 @@
 				403CA2591F54B12500690455 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		403CA2721F54CA8200690455 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				403CA27B1F54D37800690455 /* NGNFilteringViewController.h */,
+				403CA27C1F54D37800690455 /* NGNFilteringViewController.m */,
+				403CA27D1F54D37800690455 /* NGNSelectViewController.h */,
+				403CA27E1F54D37800690455 /* NGNSelectViewController.m */,
+			);
+			name = Controller;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		403CA2731F54CA9C00690455 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				403CA2741F54CAD500690455 /* NGNImageCell.h */,
+				403CA2751F54CAD500690455 /* NGNImageCell.m */,
+				403CA2771F54D05300690455 /* UIImage+NGNScaledImage.h */,
+				403CA2781F54D05300690455 /* UIImage+NGNScaledImage.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		403CA27A1F54D34500690455 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				403CA2811F54D39B00690455 /* NGNFilteringService.h */,
+				403CA2821F54D39B00690455 /* NGNFilteringService.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		403CA2871F54DCE400690455 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				403CA28A1F54DCEF00690455 /* Photos.framework */,
+				403CA2881F54DCE400690455 /* QuartzCore.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,10 +213,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				403CA2601F54B12500690455 /* NGNSelectViewController.m in Sources */,
-				403CA2711F54B23000690455 /* NGNFilteringViewController.m in Sources */,
+				403CA2831F54D39B00690455 /* NGNFilteringService.m in Sources */,
+				403CA2761F54CAD500690455 /* NGNImageCell.m in Sources */,
+				403CA27F1F54D37800690455 /* NGNFilteringViewController.m in Sources */,
 				403CA25D1F54B12500690455 /* AppDelegate.m in Sources */,
 				403CA25A1F54B12500690455 /* main.m in Sources */,
+				403CA2801F54D37800690455 /* NGNSelectViewController.m in Sources */,
+				403CA2791F54D05300690455 /* UIImage+NGNScaledImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,4 +10,6 @@
 
 @interface NGNFilteringViewController : UIViewController
 
+@property (strong, nonatomic) UIImage *originalImage;
+
 @end
