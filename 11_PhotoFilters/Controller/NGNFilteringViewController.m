@@ -38,10 +38,8 @@ static NSString *const NGNThumbnailICelldentifier = @"NGNThumbnailICelldentifier
     CGSize scale = (self.originalImage.size.width > self.view.bounds.size.width) ? CGSizeMake(0.2, 0.2) : self.originalImage.size;
     self.scaledImage = [UIImage imageWithImage:self.originalImage convertWithScale:scale];
     
-    self.imageView.contentMode = UIViewContentModeScaleAspectFit;
-    self.imageView.autoresizingMask = ( UIViewAutoresizingNone );
-    
     self.imageView.image = self.scaledImage;
+    
     self.thumbnailImage = [UIImage imageWithImage:self.originalImage convertToSize:CGSizeMake(90, 90)];
     self.handlingInProgress = NO;
 }

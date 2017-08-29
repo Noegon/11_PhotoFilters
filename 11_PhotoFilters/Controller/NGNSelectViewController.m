@@ -13,6 +13,7 @@
 @interface NGNSelectViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) UIImage *bufferImage;
 
 - (IBAction)selectButtonTapped:(UIButton *)sender;
 - (IBAction)takeButtonTapped:(UIButton *)sender;
