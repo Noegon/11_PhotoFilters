@@ -49,8 +49,6 @@ static NSString *const NGNThumbnailICelldentifier = @"NGNThumbnailICelldentifier
         return;
     }
     
-//    UIImageWriteToSavedPhotosAlbum(self.handledImage, nil, @selector(image:didFinishSavingWithError:contextInfo:), nil);
-    
     [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
         [PHAssetChangeRequest creationRequestForAssetFromImage:self.handledImage];
     } completionHandler:^(BOOL success, NSError *error){
@@ -59,12 +57,6 @@ static NSString *const NGNThumbnailICelldentifier = @"NGNThumbnailICelldentifier
         }
     }];
 }
-
-//- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
-//    if (error) {
-//        NSLog(@"%@", error.userInfo);
-//    }
-//}
 
 #pragma mark - CollectionView data source delegate
 
@@ -96,8 +88,8 @@ static NSString *const NGNThumbnailICelldentifier = @"NGNThumbnailICelldentifier
                           effectType:indexPath.row
                    completitionBlock:
      ^(UIImage *filteredImage, NGNFilteringEffectType effectType){
-         self.imageView.image = filteredImage;
          self.handledImage = [UIImage imageWithImage:filteredImage convertWithScale:CGSizeMake(1, 1)];
+         self.imageView.image = self.handledImage;
          self.currentType = indexPath.row;
          self.handlingInProgress = NO;
     }];

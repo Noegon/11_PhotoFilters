@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ta8-od-Fc3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ta8-od-Fc3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -61,18 +61,18 @@
                                 </constraints>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Syi-Y5-YGD">
-                                <rect key="frame" x="10" y="74" width="355" height="533"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="553"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.4431372549" green="0.65098039220000004" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="cu6-iE-xhE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BwJ-58-hjX"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cu6-iE-xhE" secondAttribute="bottom" id="HzE-Dy-eM5"/>
-                            <constraint firstItem="Syi-Y5-YGD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="I18-90-zwp"/>
-                            <constraint firstAttribute="trailing" secondItem="Syi-Y5-YGD" secondAttribute="trailing" constant="10" id="S57-gT-Nd7"/>
-                            <constraint firstItem="cu6-iE-xhE" firstAttribute="top" secondItem="Syi-Y5-YGD" secondAttribute="bottom" constant="10" id="c87-VK-MBe"/>
+                            <constraint firstItem="Syi-Y5-YGD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="I18-90-zwp"/>
+                            <constraint firstAttribute="trailing" secondItem="Syi-Y5-YGD" secondAttribute="trailing" id="S57-gT-Nd7"/>
+                            <constraint firstItem="cu6-iE-xhE" firstAttribute="top" secondItem="Syi-Y5-YGD" secondAttribute="bottom" id="c87-VK-MBe"/>
                             <constraint firstAttribute="trailing" secondItem="cu6-iE-xhE" secondAttribute="trailing" id="dO8-Is-oCV"/>
-                            <constraint firstItem="Syi-Y5-YGD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="yOn-Ed-eR0"/>
+                            <constraint firstItem="Syi-Y5-YGD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="yOn-Ed-eR0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Select image" id="XT5-rY-efA"/>
@@ -97,7 +97,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gNp-Ug-Llq">
-                                <rect key="frame" x="10" y="74" width="355" height="483"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="503"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xh4-95-B10">
                                 <rect key="frame" x="0.0" y="567" width="375" height="100"/>
@@ -145,11 +145,11 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="xh4-95-B10" secondAttribute="trailing" id="KPk-9z-iN0"/>
                             <constraint firstItem="xh4-95-B10" firstAttribute="leading" secondItem="1yn-Ys-jgJ" secondAttribute="leading" id="TuT-20-foA"/>
-                            <constraint firstAttribute="trailing" secondItem="gNp-Ug-Llq" secondAttribute="trailing" constant="10" id="eoA-r6-igd"/>
+                            <constraint firstAttribute="trailing" secondItem="gNp-Ug-Llq" secondAttribute="trailing" id="eoA-r6-igd"/>
                             <constraint firstItem="fbq-Nh-0K4" firstAttribute="top" secondItem="xh4-95-B10" secondAttribute="bottom" id="icE-tP-c9L"/>
-                            <constraint firstItem="gNp-Ug-Llq" firstAttribute="leading" secondItem="1yn-Ys-jgJ" secondAttribute="leading" constant="10" id="rJg-yl-duh"/>
-                            <constraint firstItem="gNp-Ug-Llq" firstAttribute="top" secondItem="hIb-rt-F42" secondAttribute="bottom" constant="10" id="sgw-bT-wwh"/>
-                            <constraint firstItem="xh4-95-B10" firstAttribute="top" secondItem="gNp-Ug-Llq" secondAttribute="bottom" constant="10" id="uqp-pA-BYS"/>
+                            <constraint firstItem="gNp-Ug-Llq" firstAttribute="leading" secondItem="1yn-Ys-jgJ" secondAttribute="leading" id="rJg-yl-duh"/>
+                            <constraint firstItem="gNp-Ug-Llq" firstAttribute="top" secondItem="hIb-rt-F42" secondAttribute="bottom" id="sgw-bT-wwh"/>
+                            <constraint firstItem="xh4-95-B10" firstAttribute="top" secondItem="gNp-Ug-Llq" secondAttribute="bottom" id="uqp-pA-BYS"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Correct image" id="GUw-uu-Ej0">
