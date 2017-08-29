@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ta8-od-Fc3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ta8-od-Fc3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Select image-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="NGNSelectViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NGNViewControllerIdentifierSelect" id="BYZ-38-t0r" customClass="NGNSelectViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -60,15 +60,25 @@
                                     <constraint firstAttribute="trailing" secondItem="eHR-vu-0Na" secondAttribute="trailing" id="zhC-VJ-GTC"/>
                                 </constraints>
                             </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Syi-Y5-YGD">
+                                <rect key="frame" x="10" y="74" width="355" height="533"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.4431372549" green="0.65098039220000004" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="cu6-iE-xhE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BwJ-58-hjX"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cu6-iE-xhE" secondAttribute="bottom" id="HzE-Dy-eM5"/>
+                            <constraint firstItem="Syi-Y5-YGD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="I18-90-zwp"/>
+                            <constraint firstAttribute="trailing" secondItem="Syi-Y5-YGD" secondAttribute="trailing" constant="10" id="S57-gT-Nd7"/>
+                            <constraint firstItem="cu6-iE-xhE" firstAttribute="top" secondItem="Syi-Y5-YGD" secondAttribute="bottom" constant="10" id="c87-VK-MBe"/>
                             <constraint firstAttribute="trailing" secondItem="cu6-iE-xhE" secondAttribute="trailing" id="dO8-Is-oCV"/>
+                            <constraint firstItem="Syi-Y5-YGD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="yOn-Ed-eR0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Select image" id="XT5-rY-efA"/>
+                    <connections>
+                        <outlet property="imageView" destination="Syi-Y5-YGD" id="6Fc-ej-gC6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -77,7 +87,7 @@
         <!--Correct image-->
         <scene sceneID="zhO-ye-DgG">
             <objects>
-                <viewController storyboardIdentifier="NGNFilteringViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UZh-46-H32" customClass="NGNFilteringViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NGNViewControllerIdentifierFilter" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UZh-46-H32" customClass="NGNFilteringViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hIb-rt-F42"/>
                         <viewControllerLayoutGuide type="bottom" id="fbq-Nh-0K4"/>
@@ -86,7 +96,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0kW-b9-QZ5">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0kW-b9-QZ5">
                                 <rect key="frame" x="10" y="74" width="355" height="483"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Nhd-rA-90O">
@@ -143,7 +153,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Correct image" id="GUw-uu-Ej0">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="Jhq-CQ-Yhh"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="Jhq-CQ-Yhh">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="UZh-46-H32" id="pGj-XE-llL"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="Nhd-rA-90O" id="wfx-hc-1T0"/>
@@ -160,7 +174,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ta8-od-Fc3" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7eI-NP-FJZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

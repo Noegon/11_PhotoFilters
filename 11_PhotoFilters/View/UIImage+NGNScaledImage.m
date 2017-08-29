@@ -18,4 +18,12 @@
     return destImage;
 }
 
++ (UIImage *)imageWithImage:(UIImage *)image convertWithScale:(CGSize)scale {
+    UIGraphicsBeginImageContext(CGSizeMake((image.size.width * scale.width), (image.size.height * scale.height)));
+    [image drawInRect:CGRectMake(0, 0, (image.size.width * scale.width), (image.size.height * scale.height))];
+    UIImage *destImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return destImage;
+}
+
 @end

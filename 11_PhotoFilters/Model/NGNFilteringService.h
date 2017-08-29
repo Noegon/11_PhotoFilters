@@ -13,32 +13,35 @@
 #import <Foundation/Foundation.h>
 
 typedef NS_ENUM(NSInteger, NGNFilteringEffectType) {
-    NGNFilteringEffectTypeNone = 0,
-    NGNFilteringEffectTypeMono,
+    NGNFilteringEffectTypeMono = 0,
     NGNFilteringEffectTypeChrome,
     NGNFilteringEffectTypeFade,
-    NGNFilteringEffectTypeInstant,
+    NGNFilteringEffectTypeInvert,
     NGNFilteringEffectTypeNoir,
     NGNFilteringEffectTypeProcess,
-    NGNFilteringEffectTypeTonel,
-    NGNFilteringEffectTypeTransfer
+    NGNFilteringEffectTypeTonal,
+    NGNFilteringEffectTypeTransfer,
+    NGNFilteringEffectTypeNone
 };
 
 typedef void (^completitionBlock) (UIImage *image, NGNFilteringEffectType effectType);
 
-static const NSUInteger FilteringEffectCount = 8;
+static const NSUInteger NGNFilteringEffectCount = 8;
 
+// fine descision for enum and string values binding
 static NSString *const NGNStringFilteringEffectType[] = {
-    [NGNFilteringEffectTypeMono] = @"",
-    [NGNFilteringEffectTypeChrome] = @"",
-    [NGNFilteringEffectTypeFade] = @"",
-    [NGNFilteringEffectTypeInstant] = @"",
-    [NGNFilteringEffectTypeNoir] = @"",
-    [NGNFilteringEffectTypeProcess] = @"",
-    [NGNFilteringEffectTypeTonel] = @"",
-    [NGNFilteringEffectTypeTransfer] = @""
+    [NGNFilteringEffectTypeMono] = @"CIColorMonochrome",
+    [NGNFilteringEffectTypeChrome] = @"CIPhotoEffectChrome",
+    [NGNFilteringEffectTypeFade] = @"CIPhotoEffectFade",
+    [NGNFilteringEffectTypeInvert] = @"CIColorInvert",
+    [NGNFilteringEffectTypeNoir] = @"CIPhotoEffectNoir",
+    [NGNFilteringEffectTypeProcess] = @"CIPhotoEffectProcess",
+    [NGNFilteringEffectTypeTonal] = @"CIPhotoEffectTonal",
+    [NGNFilteringEffectTypeTransfer] = @"CIPhotoEffectTransfer"
 };
 
 @interface NGNFilteringService : NSObject
+
++ (void)filterImage:(UIImage *)originalImafe effectType:(NGNFilteringEffectType)effectType completitionBlock:(completitionBlock)completitionBlock;
 
 @end

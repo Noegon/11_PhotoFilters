@@ -11,5 +11,6 @@
 @interface UIImage (NGNScaledImage)
 
 + (UIImage *)imageWithImage:(UIImage *)image convertToSize:(CGSize)size;
++ (UIImage *)imageWithImage:(UIImage *)image convertWithScale:(CGSize)scale;
 
 @end

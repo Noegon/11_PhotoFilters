@@ -13,9 +13,9 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     
-    self.imageView.layer.cornerRadius = 5;
-    self.imageView.layer.borderColor = [UIColor blackColor].CGColor;
-    self.imageView.layer.borderWidth = 2;
+    self.layer.cornerRadius = 20;
+    self.layer.borderColor = [UIColor blackColor].CGColor;
+    self.layer.borderWidth = 2;
 }
 
 @end

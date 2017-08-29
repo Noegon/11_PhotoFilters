@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25BDB4CC1F55721C00B8A9FD /* NGNCommonConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 25BDB4CB1F55721C00B8A9FD /* NGNCommonConstants.m */; };
 		403CA25A1F54B12500690455 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 403CA2591F54B12500690455 /* main.m */; };
 		403CA25D1F54B12500690455 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 403CA25C1F54B12500690455 /* AppDelegate.m */; };
 		403CA2631F54B12500690455 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 403CA2611F54B12500690455 /* Main.storyboard */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		25BDB4CA1F55721C00B8A9FD /* NGNCommonConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGNCommonConstants.h; sourceTree = "<group>"; };
+		25BDB4CB1F55721C00B8A9FD /* NGNCommonConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGNCommonConstants.m; sourceTree = "<group>"; };
 		403CA2551F54B12500690455 /* 11_PhotoFilters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 11_PhotoFilters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		403CA2591F54B12500690455 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		403CA25B1F54B12500690455 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -77,6 +80,8 @@
 		403CA2571F54B12500690455 /* 11_PhotoFilters */ = {
 			isa = PBXGroup;
 			children = (
+				25BDB4CA1F55721C00B8A9FD /* NGNCommonConstants.h */,
+				25BDB4CB1F55721C00B8A9FD /* NGNCommonConstants.m */,
 				403CA25B1F54B12500690455 /* AppDelegate.h */,
 				403CA25C1F54B12500690455 /* AppDelegate.m */,
 				403CA27A1F54D34500690455 /* Model */,
@@ -167,7 +172,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = NGN;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Alexey Stafeyev";
 				TargetAttributes = {
 					403CA2541F54B12500690455 = {
@@ -213,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25BDB4CC1F55721C00B8A9FD /* NGNCommonConstants.m in Sources */,
 				403CA2831F54D39B00690455 /* NGNFilteringService.m in Sources */,
 				403CA2761F54CAD500690455 /* NGNImageCell.m in Sources */,
 				403CA27F1F54D37800690455 /* NGNFilteringViewController.m in Sources */,
@@ -255,7 +261,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -263,7 +271,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -303,7 +315,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -311,7 +325,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
