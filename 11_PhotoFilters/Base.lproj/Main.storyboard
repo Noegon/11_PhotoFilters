@@ -60,7 +60,7 @@
                                     <constraint firstAttribute="trailing" secondItem="eHR-vu-0Na" secondAttribute="trailing" id="zhC-VJ-GTC"/>
                                 </constraints>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Syi-Y5-YGD">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Syi-Y5-YGD">
                                 <rect key="frame" x="0.0" y="64" width="375" height="553"/>
                             </imageView>
                         </subviews>
@@ -96,9 +96,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gNp-Ug-Llq">
-                                <rect key="frame" x="0.0" y="64" width="375" height="503"/>
-                            </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xh4-95-B10">
                                 <rect key="frame" x="0.0" y="567" width="375" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -140,16 +137,19 @@
                                     <outlet property="delegate" destination="UZh-46-H32" id="bxU-81-1OK"/>
                                 </connections>
                             </collectionView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FPW-so-qbz">
+                                <rect key="frame" x="0.0" y="64" width="375" height="503"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.70980392160000005" green="0.90980392160000001" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="xh4-95-B10" firstAttribute="top" secondItem="FPW-so-qbz" secondAttribute="bottom" id="5BH-av-fDh"/>
+                            <constraint firstItem="FPW-so-qbz" firstAttribute="leading" secondItem="1yn-Ys-jgJ" secondAttribute="leading" id="8IJ-uy-2qY"/>
                             <constraint firstAttribute="trailing" secondItem="xh4-95-B10" secondAttribute="trailing" id="KPk-9z-iN0"/>
                             <constraint firstItem="xh4-95-B10" firstAttribute="leading" secondItem="1yn-Ys-jgJ" secondAttribute="leading" id="TuT-20-foA"/>
-                            <constraint firstAttribute="trailing" secondItem="gNp-Ug-Llq" secondAttribute="trailing" id="eoA-r6-igd"/>
                             <constraint firstItem="fbq-Nh-0K4" firstAttribute="top" secondItem="xh4-95-B10" secondAttribute="bottom" id="icE-tP-c9L"/>
-                            <constraint firstItem="gNp-Ug-Llq" firstAttribute="leading" secondItem="1yn-Ys-jgJ" secondAttribute="leading" id="rJg-yl-duh"/>
-                            <constraint firstItem="gNp-Ug-Llq" firstAttribute="top" secondItem="hIb-rt-F42" secondAttribute="bottom" id="sgw-bT-wwh"/>
-                            <constraint firstItem="xh4-95-B10" firstAttribute="top" secondItem="gNp-Ug-Llq" secondAttribute="bottom" id="uqp-pA-BYS"/>
+                            <constraint firstItem="FPW-so-qbz" firstAttribute="top" secondItem="hIb-rt-F42" secondAttribute="bottom" id="jRn-ak-DYD"/>
+                            <constraint firstAttribute="trailing" secondItem="FPW-so-qbz" secondAttribute="trailing" id="jt4-ul-mXh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Correct image" id="GUw-uu-Ej0">
@@ -161,12 +161,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="xh4-95-B10" id="qT3-TQ-bVh"/>
-                        <outlet property="imageView" destination="gNp-Ug-Llq" id="Nmo-9j-CGd"/>
+                        <outlet property="scrollView" destination="FPW-so-qbz" id="1a0-5d-t3X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yiq-Rp-LVq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1918" y="139"/>
+            <point key="canvasLocation" x="1917.5999999999999" y="138.98050974512745"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sum-c4-szc">

@@ -17,8 +17,9 @@ static NSString *const NGNThumbnailICelldentifier = @"NGNThumbnailICelldentifier
 
 @interface NGNFilteringViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
 
-@property (strong, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) UIImageView *imageView;
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @property (strong, nonatomic) UIImage *scaledImage;
 @property (strong, nonatomic) UIImage *thumbnailImage;
@@ -38,9 +39,14 @@ static NSString *const NGNThumbnailICelldentifier = @"NGNThumbnailICelldentifier
     CGSize scale = (self.originalImage.size.width > self.view.bounds.size.width) ? CGSizeMake(0.2, 0.2) : self.originalImage.size;
     self.scaledImage = [UIImage imageWithImage:self.originalImage convertWithScale:scale];
     
-    self.imageView.image = self.scaledImage;
+    self.imageView = [[UIImageView alloc] initWithImage:self.scaledImage];
+    self.imageView.contentMode = UIViewContentModeScaleToFill;
     
     self.thumbnailImage = [UIImage imageWithImage:self.originalImage convertToSize:CGSizeMake(90, 90)];
+    
+    [self.scrollView addSubview:self.imageView];
+    self.scrollView.contentSize = CGSizeMake(self.imageView.image.size.width,
+                                             self.imageView.image.size.height);
     self.handlingInProgress = NO;
 }
 
